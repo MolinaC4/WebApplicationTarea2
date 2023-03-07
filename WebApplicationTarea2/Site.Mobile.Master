@@ -11,13 +11,38 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <h1>Mobile Master Page</h1>
+        <h1>Formulario Empleados</h1>
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="content-wrapper main-content clear-fix">
+        <section class="content-wrapper main-content clear-fix"/>
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-        </section>
-        <friendlyUrls:ViewSwitcher runat="server" />
-    </div>
+
+        <fieldset> 
+          <legend>Contacto</legend> 
+          <label class="contacto" for="nombre">Nombre Completo<em>*</em></label> 
+          <input id="nombre"/><br/>
+  
+          <label class="contacto" for="ced">Cedula <em>*</em></label> 
+          <input id="cedula"/><br/> 
+          <label class="contacto" for="fec_ingreso">Fecha Ingreso <em>*</em></label> 
+          <input id="fec_ingreso"/><br/> 
+        </fieldset>
+
+        <fieldset> 
+          <label class="personal" for="puesto">Puesto</label> 
+          <select id="puesto"> 
+          <option value="hembra">Puesto1</option> 
+          <option value="macho">Puesto2</option> 
+          </select><br/> 
+        </fieldset>
+
+        <fieldset> 
+          <label class="personal" for="edificio">edificio</label> 
+          <select id="edificio"> 
+          <option value="hembra">edificio1</option> 
+          <option value="macho">edificio2</option> 
+          </select><br/> 
+        </fieldset>
+        </div>
     </form>
 </body>
 </html>
