@@ -7,12 +7,12 @@ using System.Xml.Linq;
 
 namespace WebApplicationTarea2.Models
 {
-    public class edificios
+    public class Edificios
     {
         [ScaffoldColumn(false)]
-        public int id_edificio { get; set; }
+        public int Id_edificio { get; set; }
 
         [Required, StringLength(150), Display(Name = "Name")]
-        public string nombre_edificio { get; set; }
+        public string Nombre_edificio { get; set; }
     }
 }

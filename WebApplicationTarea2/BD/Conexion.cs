@@ -26,12 +26,12 @@ namespace WebApplicationTarea2.BD
             command.ExecuteNonQuery();
         }
 
-        public void openConnection()
+        public void OpenConnection()
         {
             connection.Open();
         }
 
-        public void closeConnection()
+        public void CloseConnection()
         {
             connection.Close();
         }

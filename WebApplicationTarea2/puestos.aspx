@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Formulario de puestos</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -26,6 +27,8 @@
           <option value="sexto">Sexto grado</option> 
           </select><br/> 
         </fieldset>
+
+        <button type="submit" name="button" class="btn login_btn">Guardar</button>
         </div>
     </form>
 </body>

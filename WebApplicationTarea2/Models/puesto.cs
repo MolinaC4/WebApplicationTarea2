@@ -10,29 +10,30 @@ using WebApplicationTarea2.BD;
 
 namespace WebApplicationTarea2.Models
 {
-    public class puesto
+    public class Puesto
     {
-        private int id_puesto1;
+        private int Id_puesto1;
         private String nombre_puesto1;
 
-        public int id_puesto { get => id_puesto1; set => id_puesto1 = value; }
+        public int Id_puesto { get => Id_puesto1; set => Id_puesto1 = value; }
 
         [Required, StringLength(150), Display(Name = "Name")]
-        public string nombre_puesto { get => nombre_puesto1; set => nombre_puesto1 = value; }
+        public string Nombre_puesto { get => nombre_puesto1; set => nombre_puesto1 = value; }
 
-        public void inserta_puesto()
+        public void Inserta_puesto()
         {
 
             Conexion inst = new Conexion();
-            SqlCommand cmd = new SqlCommand("spAddUser", inst.Connection);
+            SqlCommand sqlCommand = new SqlCommand("spAddUser", inst.Connection);
+            SqlCommand cmd = sqlCommand;
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@id_puesto", this.id_puesto1);
+            cmd.Parameters.AddWithValue("@id_puesto", this.Id_puesto1);
             cmd.Parameters.AddWithValue("@nombre_puesto", this.nombre_puesto1);
 
-            inst.openConnection();
+            inst.OpenConnection();
             cmd.ExecuteNonQuery();
-            inst.closeConnection();
+            inst.CloseConnection();
         }
     }
 }
